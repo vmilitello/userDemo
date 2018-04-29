@@ -71,7 +71,9 @@ namespace eManage.Repo
             var dbUser = GetUserById(id);
 
             if (dbUser == null)
-                throw new ArgumentException(); //TODO: this should be a custom domain exception, not a generic one.
+            {
+                throw new ArgumentException("Update not available for the current user");
+            }
 
             //set new values
             dbUser.Address = user.Address;

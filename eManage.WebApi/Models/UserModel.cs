@@ -54,6 +54,7 @@ namespace eManage.Models
         /// User Age
         /// </summary>
         [Required]
+        [Range(0, Int32.MaxValue)]
         public int Age { get; set; }
 
         /// <summary>

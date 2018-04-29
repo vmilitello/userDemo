@@ -1,10 +1,34 @@
-# eManage Development 
+# eManage Development
+
+Following a few information about the project.
+If you have any questions, feel free to contact me.
 
 - [eManage Development](#emanage-development)
-    - [BackEnd](#backend)
-    - [FrontEnd](#frontend)
+    - [Projet Folder Structure](#projet-folder-structure)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
 
-## BackEnd
+## Projet Folder Structure
+
+----------
+
+```
+.
+├── eManage.Domain
+|   └── ....
+├── eManage.Repo
+|   └── ....
+├── eManage.UI
+|   ├── app
+|   |    └── ...
+|   └── index.html
+├── eManage.WebApi
+|   └── ....
+├── eManage.sln
+└── README.MD
+```
+
+## Backend
 
 ----------
 The backend is composed by three different **.Net Core 2.0** projects (available on the **eManage** solution): 
@@ -40,10 +64,12 @@ services.AddCors(options =>
             });
 ```
 
-## FrontEnd
+## Frontend
+
+----------
 
 The client application can be found under the eManage.UI folder.
-To start the fronted application, from your command prompt navigate to the folder path and type.
+To start the frontend application, from your command prompt navigate to the folder path and type.
 
 ```sh
 npm start
@@ -52,13 +78,13 @@ npm start
 This will download all the necessary npm packages, and it will make the application available at http://localhost:8000.
 
 > Note: the application is configured to use the endpoints exposed at http://localhost:60815. If you change the server endpoint, this must be changed in the UI app as well.  
-To do so, open the **eManage.app.js** and replace the url in the following line
+To do so, open the **eManage.app.js** and replace the URL in the following line
 
 ```js
 $apiEndpoint.set("http://localhost:60815/api/");
 ```
 
-The client already use a minified file which contains all javascript files in the app. The file is named "eManage.app.min.js" under the "scripts" folder.
+The client already uses a minified file which contains all javascript files in the app. The file is named "eManage.app.min.js" under the "scripts" folder.
 If you want to regenerate it, you can just call the default gulp process 
 
 ```sh

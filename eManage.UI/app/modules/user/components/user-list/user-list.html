@@ -23,7 +23,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="u in $ctrl.users | filter:uFilter" class="user-list__table-row">
+                        <tr ng-repeat="u in $ctrl.users | filter: {name:uFilter}" class="user-list__table-row">
                             <td>
                                 <a ui-sref="userDetail({ id: u.id })">{{u.id}}</a>
                             </td>

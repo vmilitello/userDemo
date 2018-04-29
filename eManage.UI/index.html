@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="eManage.app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="eManage.app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="eManage.app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="eManage.app" class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>eManage - Code Project</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./content/app.css">
+    <link rel="stylesheet" href="./app/modules/user/content/eManage.users.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"></link>
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://www.emanagedevelopment.com/" target="_new">
+          <img alt="Brand" src="http://www.emanagedevelopment.com/wp-content/themes/emanage-theme/images/logo.png">
+        </a>
+      </div>
+      
+      <ul class="nav navbar-nav">
+        <li ui-sref-active="active">
+            <a ui-sref="userList">List</a>
+        </li>
+        <li ui-sref-active="active" >
+            <a ui-sref="newUser">New</a>
+        </li>
+      </ul>
+    </nav>
+
+    
+    <div class="container-fluid">
+      <ui-view></ui-view>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.15/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js"></script>
+    
+    
+
+    <!-- User Module, components, services.. -->
+    <script src="./scripts/eManage.app.js"></script>
+
+    <!-- <script src="./app/eManage.app.js"></script>
+    <script src="./app/modules/user/eManage.users.js"></script>
+    <script src="./app/modules/user/services/userservice.js"></script>
+    <script src="./app/modules/user/components/user-list/user-list.js"></script>
+    <script src="./app/modules/user/components/user-viewer/user-viewer.js"></script>
+    <script src="./app/modules/user/components/new-user/new-user.js"></script>
+    <script src="./app/modules/user/components/edit-user/edit-user.js"></script>
+    <script src="./app/modules/user/components/user-editor/user-editor.js"></script> -->
+  </body>
+
+</html>

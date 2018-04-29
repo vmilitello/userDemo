@@ -1,0 +1,70 @@
+<div class="row">
+    <form name="userForm" novalidate>
+        <div class="col-md-12 ">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{$ctrl.user.name}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 " align="center">
+                            <img alt="User Pic" src="/img/anonymous.png" class="img-circle img-responsive"> </div>
+                        <div class=" col-md-9 col-lg-9 ">
+
+                            <div class=" col-md-9 col-lg-9 ">
+                                <table class="table table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label for="">Name</label>
+                                            </td>
+                                            <td>
+                                                <div class="form-group" ng-class="{ 'has-error' : userForm.userName.$invalid }">
+                                                    <input type="text" ng-maxlength="50" name="userName" ng-model="$ctrl.user.name" ng-required="true" class="form-control" id="userName"
+                                                        placeholder="Enter full name here">
+                                                    <p ng-show="userForm.userName.$error.required && !userForm.userName.$pristine" class="help-block">This is a required field.</p>
+                                                    <p ng-show="userForm.userName.$error.maxlength" class="help-block">This field cannot be more than 50 chars</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="">Age</label>
+                                            </td>
+                                            <td>
+                                                <div class="form-group" ng-class="{ 'has-error' : userForm.age.$invalid }">
+                                                    <input type="number" name="age" ng-model="$ctrl.user.age" ng-min="0" ng-required="true" class="form-control" id="age" placeholder="Enter user age here">
+                                                    <p ng-show="userForm.age.$error.min" class="help-block">Age cannot be lower than 0.</p>
+                                                    <p ng-show="userForm.age.$error.required && !userForm.age.$pristine" class="help-block">This is a required field.</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="">Address</label>
+                                            </td>
+                                            <td>
+                                                <div class="form-group" ng-class="{ 'has-error' : userForm.address.$invalid }">
+                                                    <textarea type="textarea" name="address" cols="40" rows="5" aria-multiline="true" ng-model="$ctrl.user.address" ng-maxlength="50"
+                                                        class="form-control" id="address" placeholder="Enter address here">
+                                                    </textarea>
+                                                    <p ng-show="userForm.address.$error.maxlength" class="help-block">This field cannot be more than 50 chars</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                        <a class="btn btn-default" ng-click="$ctrl.submitForm(userForm.$valid, $ctrl.user)"  role="button" type="button" data-original-title="Save">
+                                <span class="glyphicon glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> Save
+                        </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
